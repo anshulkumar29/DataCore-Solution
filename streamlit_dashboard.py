@@ -20,7 +20,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from statsmodels.stats.multitest import multipletests
 
-DATA_PATH = "C:/Users/Hp/Downloads/customer_churn_dataset-testing-master.csv"
+DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "customer_churn_dataset-testing-master.csv")
 TARGET = "Churn"
 NUMERIC = ["Age", "Tenure", "Usage Frequency", "Support Calls",
            "Payment Delay", "Total Spend", "Last Interaction"]
@@ -261,3 +261,8 @@ else:
             st.success(f"Likely to STAY - churn probability {prob:.1%}")
         st.progress(float(prob))
         st.caption(f"Model: {model_name} (test accuracy {metrics['Accuracy']:.3f})")
+
+
+# ----------------------------------------------------------------- chatbot (bottom of sidebar)
+from chatbot import render_chatbot
+render_chatbot(df, train_model)
