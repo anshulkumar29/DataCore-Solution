@@ -1,0 +1,8 @@
+# secrets - never commit
+.streamlit/secrets.toml
+.env
+
+# generated
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
