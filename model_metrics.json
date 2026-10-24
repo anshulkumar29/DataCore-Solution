@@ -1,0 +1,66 @@
+{
+  "final_model": "Random Forest (200 trees, max_depth=12)",
+  "test_scores": {
+    "Accuracy": 0.998,
+    "Precision": 0.9989,
+    "Recall": 0.9969,
+    "F1": 0.9979,
+    "ROC-AUC": 1.0
+  },
+  "cv_mean_f1": 0.9981,
+  "cv_std_f1": 0.0003,
+  "all_models": [
+    {
+      "Model": "Dummy (majority)",
+      "Accuracy": 0.5263,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "ROC-AUC": 0.5
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.8271,
+      "Precision": 0.8136,
+      "Recall": 0.8237,
+      "F1": 0.8186,
+      "ROC-AUC": 0.903
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.9539,
+      "Precision": 0.9308,
+      "Recall": 0.9751,
+      "F1": 0.9524,
+      "ROC-AUC": 0.9937
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.998,
+      "Precision": 0.9989,
+      "Recall": 0.9969,
+      "F1": 0.9979,
+      "ROC-AUC": 1.0
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Accuracy": 1.0,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1": 1.0,
+      "ROC-AUC": 1.0
+    }
+  ],
+  "top_features": {
+    "Payment Delay": 0.4559,
+    "Support Calls": 0.1662,
+    "Tenure": 0.1043,
+    "Usage Frequency": 0.0813,
+    "Gender_Male": 0.0737
+  },
+  "risk_bands": {
+    "Low": "< 0.30",
+    "Medium": "0.30 to 0.70",
+    "High": ">= 0.70"
+  }
+}
